@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="RunFirst"  parallel="tests" >
+  <test  name="RunFirst">
+	  <parameter name="browser" value="chrome"></parameter>	 
+    <classes>
+      <class name="testrunner.Runner1"></class>
+     
+    </classes>
+    </test> 
+    
+    <test  name="RunParallel">
+	  <parameter name="browser" value="chrome"></parameter>	 
+    <classes>
+      <class name="testrunner.Runner2"></class>
+    </classes>
+    </test> 
+      
+</suite> <!-- Suite -->
+

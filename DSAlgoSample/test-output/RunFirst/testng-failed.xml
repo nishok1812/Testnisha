@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite parallel="tests" name="Failed suite [RunFirst]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" parallel="tests" name="RunFirst(failed)">
+    <parameter name="browser" value="chrome"/>
+    <classes>
+      <class name="testrunner.Runner1">
+        <methods>
+          <include name="setUpClass"/>
+          <include name="tearDownClass"/>
+          <include name="runScenario" invocation-numbers="0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15"/>
+        </methods>
+      </class> <!-- testrunner.Runner1 -->
+    </classes>
+  </test> <!-- RunFirst(failed) -->
+  <test thread-count="5" parallel="tests" name="RunParallel(failed)">
+    <parameter name="browser" value="chrome"/>
+    <classes>
+      <class name="testrunner.Runner2">
+        <methods>
+          <include name="setUpClass"/>
+          <include name="runScenario" invocation-numbers="0 1 2 3 4 5 6 7 8 9 10"/>
+          <include name="tearDownClass"/>
+        </methods>
+      </class> <!-- testrunner.Runner2 -->
+    </classes>
+  </test> <!-- RunParallel(failed) -->
+</suite> <!-- Failed suite [RunFirst] -->
